@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Detail - Mobile Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-left">
+                <a href="dashboards.html" class="back-button">
+                    <i class="material-icons">arrow_back</i>
+                </a>
+                <h1 id="dashboardTitle">Dashboard</h1>
+            </div>
+            <select id="timeRange">
+                <option value="day">Today</option>
+                <option value="week">This Week</option>
+                <option value="month">This Month</option>
+            </select>
+        </header>
+
+        <div class="dashboard-detail">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-title">Total Revenue</div>
+                    <div class="metric-value">$24,500</div>
+                    <div class="metric-change positive">+15.3%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Active Users</div>
+                    <div class="metric-value">1,234</div>
+                    <div class="metric-change positive">+8.7%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Conversion Rate</div>
+                    <div class="metric-value">3.2%</div>
+                    <div class="metric-change negative">-1.2%</div>
+                </div>
+            </div>
+
+            <div class="chart-grid">
+                <div class="chart-card full-width">
+                    <h3>Revenue Trend</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Traffic Sources</h3>
+                    <canvas id="trafficChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>User Activity</h3>
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <div class="nav-item" data-page="dashboards">
+                <i class="material-icons">dashboard</i>
+                <div>Dashboards</div>
+            </div>
+            <div class="nav-item" data-page="settings">
+                <i class="material-icons">settings</i>
+                <div>Settings</div>
+            </div>
+            <div class="nav-item" data-page="profile">
+                <i class="material-icons">person</i>
+                <div>Profile</div>
+            </div>
+        </nav>
+    </div>
+    <script src="app.js"></script>
+    <script src="dashboard-detail.js"></script>
+</body>
+</html>
